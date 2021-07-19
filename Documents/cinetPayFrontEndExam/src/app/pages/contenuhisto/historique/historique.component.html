@@ -1,0 +1,17 @@
+<div fxLayout="row wrap" class="projects-wrapper">
+    <button mat-menu-item (click)="removeAll()">
+        <mat-icon>delete </mat-icon>
+        <span>Delete All</span>
+    </button>
+  <div *ngFor="let project of projects ;let indexOfelement=index;" fxFlex="100" fxFlex.gt-sm="50" class="flex-p">
+      <mat-card>
+        <mat-card-content>
+        {{project}}
+        </mat-card-content>
+          <button mat-menu-item (click)="delete(indexOfelement)">
+              <mat-icon>delete</mat-icon>
+              <span>Delete</span>
+          </button>
+      </mat-card>
+  </div>
+</div> 
